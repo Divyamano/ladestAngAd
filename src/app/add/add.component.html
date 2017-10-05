@@ -1,0 +1,41 @@
+<h1 align="center" style="color:green" > Add Address</h1>
+
+<br/><br/>
+<form role="form" #form="ngForm" class="form-horizontal" (ngSubmit)="submitForm()" ngNativeValidate>
+  <div class="form-group has-success has-feedback">
+        <label class="col-sm-4 control-label" for="inputSuccess">Name</label>
+    <div class="col-sm-4">
+      <input class="form-control" [(ngModel)]="model.name"  [ngModelOptions]="{standalone: true}" id="focusedInput" type="text" placeholder="Enter Your Name" required>
+    </div>
+  </div>
+  
+  <div class="form-group has-success has-feedback">
+        <label class="col-sm-4 control-label" for="inputSuccess">Address</label>
+    <div class="col-sm-4">
+      <input class="form-control" [(ngModel)]="model.address" [ngModelOptions]="{standalone: true}" id="focusedInput" type="text" placeholder="Enter Your Address" required>
+    </div>
+  </div>
+
+   <div class="form-group has-success has-feedback">
+        <label class="col-sm-4 control-label" for="inputSuccess">Email</label>
+    <div class="col-sm-4">
+      <input class="form-control" [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}" id="focusedInput" type="email" placeholder="Enter Your Email" required>
+    </div>
+  </div>
+
+ <div class="form-group has-success has-feedback">
+        <label class="col-sm-4 control-label" for="inputSuccess">Phone No</label>
+    <div class="col-sm-4">
+      <input class="form-control" [(ngModel)]="model.contact" [ngModelOptions]="{standalone: true}"  id="focusedInput" type="number" pattern=".{10,}"
+      minlength="10" title="10 numbers minimum" placeholder="Enter Your Phone No" required>
+    </div>
+  </div>
+
+
+  <div style="text-align:center;" class="form-group has-success has-feedback">      
+    <div class="col-sm-10">
+      <input class="btn btn-success" id="focusedInput" type="submit" value="Submit" />
+       <input class="btn btn-success" id="focusedInput" type="reset" value="Reset" />
+    </div>
+  </div>
+  </form>
